@@ -17,6 +17,7 @@ import CategoriesStores from './Components/categories/CategoriesStores';
 import Signup from './Components/signup/Signup';
 import Login from './Components/signup/Login';
 import DealsCoupon from './Components/home/DealsCoupons';
+import TopStores from './Components/topstores/TopStores';
 
 
 
@@ -55,6 +56,7 @@ function App() {
       <Route path='/signup' element={<Signup/>}/>
       <Route path='/login' element={<Login/>}/>
       <Route path='/dealscoupon' element={<DealsCoupon/>}/>
+      <Route path='/topstores' element={<TopStores/>}/>
    
     </Routes>
     <Footer/>

@@ -25,7 +25,7 @@ const Offers = () => {
             <span className="text-gray-400">›</span>
             <span className="hover:text-blue-600 cursor-pointer">Appliances</span>
             <span className="text-gray-400">›</span>
-            <span className="hover:text-blue-600 cursor-pointer">Kitchen Appliances</span>
+            <span className="hover:text-blue-600 cursor-pointer">{store}</span>
           </nav>
           <h1 className="text-3xl font-bold text-gray-900">{store} Coupons</h1>
         </div>

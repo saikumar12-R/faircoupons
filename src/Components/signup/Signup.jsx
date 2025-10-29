@@ -1,81 +1,92 @@
 import React from "react";
 import { FaUser, FaLock, FaEnvelope } from "react-icons/fa";
-import laptop from "../../assets/boy.png"
+import laptop from "../../assets/boy.png";
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const Signup = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center  p-4">
-     <div className="md:w-1/2 flex flex-col">
-                <img src={laptop}/>
-     </div>
-     
-      <div className="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-md md:w-1/2">
-        {/* Header */}
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-          Create Account
-        </h2>
-        <p className="text-center text-gray-500 mb-8">
-          Sign up to get started with your journey!
-        </p>
+    <div className="min-h-screen bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-400 flex items-center justify-center p-4">
+      <div className="flex flex-col md:flex-row bg-white/20 backdrop-blur-lg rounded-3xl shadow-2xl overflow-hidden w-full max-w-5xl">
+        
+        {/* Left Section - Illustration */}
+        <div className="md:w-1/2 bg-white/10 flex items-center justify-center p-6 md:p-10">
+          <img
+            src={laptop}
+            alt="Signup illustration"
+            className="w-80 h-auto md:w-[400px] animate-float"
+          />
+        </div>
 
-        {/* Form */}
-        <form className="space-y-5">
-          {/* Username */}
-          <div className="flex items-center border border-gray-300 rounded-full px-4 py-2 focus-within:border-indigo-500 transition">
-            <FaUser className="text-gray-500 mr-3" />
-            <input
-              type="text"
-              placeholder="Full Name"
-              className="w-full outline-none text-gray-700"
-            />
-          </div>
-
-          {/* Email */}
-          <div className="flex items-center border border-gray-300 rounded-full px-4 py-2 focus-within:border-indigo-500 transition">
-            <FaEnvelope className="text-gray-500 mr-3" />
-            <input
-              type="email"
-              placeholder="Email Address"
-              className="w-full outline-none text-gray-700"
-            />
-          </div>
-
-          {/* Password */}
-          <div className="flex items-center border border-gray-300 rounded-full px-4 py-2 focus-within:border-indigo-500 transition">
-            <FaLock className="text-gray-500 mr-3" />
-            <input
-              type="password"
-              placeholder="Password"
-              className="w-full outline-none text-gray-700"
-            />
-          </div>
-
-          {/* Confirm Password */}
-          <div className="flex items-center border border-gray-300 rounded-full px-4 py-2 focus-within:border-indigo-500 transition">
-            <FaLock className="text-gray-500 mr-3" />
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              className="w-full outline-none text-gray-700"
-            />
-          </div>
-
-          {/* Submit Button */}
-          <button
-            type="submit"
-            className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-3 rounded-full transition-transform transform hover:scale-105"
-          >
-            Sign Up
-          </button>
-
-          {/* Already have an account */}
-          <p className="text-center text-gray-600 mt-4">
-            Already have an account?{" "}
-            <a href="/login" className="text-indigo-600 hover:underline font-semibold">
-              Login
-            </a>
+        {/* Right Section - Form */}
+        <div className="md:w-1/2 bg-white rounded-3xl p-8 md:p-12">
+          <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-3">
+            Create Your Account
+          </h2>
+          <p className="text-center text-gray-500 mb-8">
+            Join us today and start your amazing journey!
           </p>
-        </form>
+
+          <form className="space-y-6">
+            {/* Full Name */}
+            <div className="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 transition">
+              <FaUser className="text-indigo-500 mr-3" />
+              <input
+                type="text"
+                placeholder="Full Name"
+                className="w-full outline-none text-gray-700 bg-transparent"
+              />
+            </div>
+
+            {/* Email */}
+            <div className="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 transition">
+              <FaEnvelope className="text-indigo-500 mr-3" />
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="w-full outline-none text-gray-700 bg-transparent"
+              />
+            </div>
+
+            {/* Password */}
+            <div className="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 transition">
+              <FaLock className="text-indigo-500 mr-3" />
+              <input
+                type="password"
+                placeholder="Password"
+                className="w-full outline-none text-gray-700 bg-transparent"
+              />
+            </div>
+
+            {/* Confirm Password */}
+            <div className="flex items-center border border-gray-300 rounded-lg px-4 py-3 focus-within:border-indigo-500 transition">
+              <FaLock className="text-indigo-500 mr-3" />
+              <input
+                type="password"
+                placeholder="Confirm Password"
+                className="w-full outline-none text-gray-700 bg-transparent"
+              />
+            </div>
+
+            {/* Button */}
+            <button
+              type="submit"
+              className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold py-3 rounded-lg transition-transform transform hover:scale-105"
+            >
+              Sign Up
+            </button>
+
+            {/* Already have an account */}
+            <p className="text-center text-gray-700 mt-4">
+              Already have an account?{" "}
+              <a
+                href="/login"
+                className="text-indigo-600 hover:underline font-semibold"
+              >
+                Login
+              </a>
+            </p>
+          </form>
+        </div>
       </div>
     </div>
   );

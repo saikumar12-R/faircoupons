@@ -55,10 +55,9 @@ const Categories = () => {
     console.log(data, "data is coming");
   };
 
-
   return (
-    <div className="absolute top-full left-0 mt-2 w-[950px] bg-white shadow-2xl border-t-4 border-blue-500 rounded-lg z-50 p-6">
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-8" >
+    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 w-[850px] max-h-[400px] bg-white shadow-2xl border-t-4 border-blue-500 rounded-xl z-50 p-6 overflow-y-auto transition-all duration-300">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
         {categories.map((cat) => (
           <div key={cat.title}>
             <h3

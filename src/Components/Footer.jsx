@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const [email, setEmail] = useState("");
@@ -14,27 +16,23 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white pt-16 pb-10 overflow-hidden">
-      {/* Decorative Gradient Background */}
-      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary-500 to-transparent pointer-events-none"></div>
+    <footer className="relative bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white pt-12 sm:pt-16 pb-8 sm:pb-10 overflow-hidden">
+      {/* Decorative Gradient Overlay */}
+      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-500 to-transparent pointer-events-none"></div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-12">
           {/* Brand Section */}
-          <div>
-            <div className="flex items-center mb-5 space-x-2">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary-400 to-accent-500 flex items-center justify-center shadow-lg">
-                <span className="text-xl font-bold">H</span>
-              </div>
-              <span className="text-2xl font-extrabold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent">
-                Harbor
-              </span>
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-blue-400 to-pink-500 flex items-center justify-center shadow-lg mb-4">
+              <img src={logo} alt="Harbor Logo" className="w-20 h-20 object-contain" />
             </div>
-            <p className="text-gray-400 leading-relaxed mb-6">
+            <p className="text-gray-400 leading-relaxed mb-6 max-w-sm">
               Discover exclusive deals, verified coupons, and special cashback offers tailored for you.
             </p>
 
-            <div className="flex space-x-5 mt-4">
+            {/* Social Icons */}
+            <div className="flex space-x-5">
               {[
                 { icon: "fab fa-twitter", label: "Twitter" },
                 { icon: "fab fa-facebook", label: "Facebook" },
@@ -45,7 +43,7 @@ const Footer = () => {
                   key={i}
                   href="#"
                   aria-label={item.label}
-                  className="p-2 bg-gray-800 hover:bg-primary-500 rounded-full transition-all duration-300 hover:scale-110"
+                  className="p-2 bg-gray-800 hover:bg-blue-500 rounded-full transition-all duration-300 hover:scale-110"
                 >
                   <i className={`${item.icon} text-lg`}></i>
                 </a>
@@ -54,54 +52,55 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="font-bold text-xl mb-4 border-l-4 border-primary-500 pl-3">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h3 className="font-bold text-xl mb-4 border-l-4 border-blue-500 pl-3">
               Quick Links
             </h3>
             <ul className="space-y-3">
-              {["Today's Deals", "Popular Stores", "Categories", "Cashback Offers", "Gift Cards"].map(
-                (item, index) => (
-                  <li key={index}>
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-primary-400 transition-all duration-300"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
-            </ul>
-          </div>
-
-          {/* Company Info */}
-          <div>
-            <h3 className="font-bold text-xl mb-4 border-l-4 border-primary-500 pl-3">
-              Company
-            </h3>
-            <ul className="space-y-3">
-              {["About Us", "Careers", "Press", "Blog", "Contact"].map((item, index) => (
-                <li key={index}>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-primary-400 transition-all duration-300"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <Link
+                  to="/deals"
+                  className="text-gray-400 hover:text-blue-400 transition-all duration-300"
+                >
+                  Today's Deals
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/giftcards"
+                  className="text-gray-400 hover:text-blue-400 transition-all duration-300"
+                >
+                  Gift Cards
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="/"
+                  className="text-gray-400 hover:text-blue-400 transition-all duration-300"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <Link
+                  to="/stores"
+                  className="text-gray-400 hover:text-blue-400 transition-all duration-300"
+                >
+                  Store
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Newsletter */}
-          <div>
-            <h3 className="font-bold text-xl mb-4 border-l-4 border-primary-500 pl-3">
+          <div className="flex flex-col items-center sm:items-start text-center sm:text-left">
+            <h3 className="font-bold text-xl mb-4 border-l-4 border-blue-500 pl-3">
               Stay Connected
             </h3>
-            <p className="text-gray-400 mb-5">
+            <p className="text-gray-400 mb-5 max-w-sm">
               Subscribe to get the latest coupons and deal alerts directly to your inbox.
             </p>
-            <div className="flex bg-gray-800 rounded-full overflow-hidden border border-gray-700">
+            <div className="flex bg-gray-800 rounded-full overflow-hidden border border-gray-700 w-full max-w-sm">
               <input
                 type="email"
                 value={email}
@@ -111,7 +110,7 @@ const Footer = () => {
               />
               <button
                 onClick={handleSubscribe}
-                className="bg-primary-500 hover:bg-primary-600 text-white px-5 transition-all duration-300"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-5 transition-all duration-300"
               >
                 <i className="fas fa-paper-plane"></i>
               </button>
@@ -119,18 +118,18 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Divider */}
+        {/* Divider Section */}
         <div className="border-t border-gray-700 pt-6 text-center">
           <p className="text-gray-400 text-sm">
             &copy; {new Date().getFullYear()}{" "}
-            <span className="text-primary-400 font-semibold">Harbor</span>. All rights reserved.
+            <span className="text-blue-400 font-semibold">Harbor</span>. All rights reserved.
           </p>
           <div className="mt-3 space-x-4 text-sm">
-            <a href="#" className="hover:text-primary-400 transition-all duration-300">
+            <a href="#" className="hover:text-blue-400 transition-all duration-300">
               Privacy Policy
             </a>
             <span>|</span>
-            <a href="#" className="hover:text-primary-400 transition-all duration-300">
+            <a href="#" className="hover:text-blue-400 transition-all duration-300">
               Terms of Service
             </a>
           </div>

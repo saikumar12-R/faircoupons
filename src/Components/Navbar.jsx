@@ -5,9 +5,8 @@ import TopStores from "./topstores/TopStores";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
-  
   return (
     <>
       {/* Top Announcement Bar - Modern Gradient */}
@@ -20,8 +19,12 @@ const Navbar = () => {
               <span className="font-semibold">LIVE DEALS</span>
             </div>
             <span className="font-medium">
-              Flash Sale: Extra <span className="font-bold text-yellow-300">15% OFF</span> with code{" "}
-              <span className="font-bold bg-white/20 px-2 py-0.5 rounded">SAVE15</span>
+              Flash Sale: Extra{" "}
+              <span className="font-bold text-yellow-300">15% OFF</span> with
+              code{" "}
+              <span className="font-bold bg-white/20 px-2 py-0.5 rounded">
+                SAVE15
+              </span>
             </span>
           </div>
         </div>
@@ -34,9 +37,10 @@ const Navbar = () => {
           <div className="flex items-center justify-between py-3">
             {/* Logo */}
             <div className="flex items-center gap-3">
-              <div className="w-24 h-12 flex items-center justify-center bg-gradient-to-br from-blue-600 to-purple-700 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-24 h-12 flex items-center justify-center bg-gradient-to-br from-blue-600 to-purple-700 rounded-xl shadow-lg hover:shadow-xl transition-shadow cursor-pointer">
                 <img
                   src={faircoupon}
+                  onClick={() => navigate("/")}
                   alt="FairCoupons Logo"
                   className="bg-slate-400"
                 />
@@ -45,7 +49,9 @@ const Navbar = () => {
                 <h1 className="text-2xl font-black bg-gradient-to-r from-gray-900 to-blue-800 bg-clip-text text-transparent tracking-tight">
                   FairCoupons
                 </h1>
-                <p className="text-xs text-gray-500 -mt-1">Save Big, Shop Smart</p>
+                <p className="text-xs text-gray-500 -mt-1">
+                  Save Big, Shop Smart
+                </p>
               </div>
             </div>
 
@@ -90,7 +96,10 @@ const Navbar = () => {
                   <i className="far fa-bell text-lg group-hover:scale-110 transition-transform"></i>
                   <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
                 </button>
-                <button onClick={()=>navigate('/signup')} className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2.5 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center gap-2">
+                <button
+                  onClick={() => navigate("/signup")}
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2.5 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center gap-2"
+                >
                   <i className="far fa-user"></i>
                   Sign In
                 </button>
@@ -125,19 +134,20 @@ const Navbar = () => {
                   Categories
                   <i className="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
                 </button>
-                <div className="absolute left-0 mt-2 w-72 bg-white shadow-2xl rounded-2xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 border border-gray-100">
+                <div className="absolute left-0 mt-1 ml-72 w-40 bg-white shadow-2xl rounded-2xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 border border-gray-100">
                   <CategoriesDropdown />
                 </div>
               </div>
 
               {/* Top Stores Dropdown */}
               <div className="relative group">
-                <button className="flex items-center gap-2 py-2 transition-all hover:text-blue-600 group">
+                <button className="flex items-center gap-2 py-2 px-4 font-medium transition-all hover:text-blue-600 group">
                   <i className="fas fa-store text-sm"></i>
                   Top Stores
                   <i className="fas fa-chevron-down text-xs transition-transform group-hover:rotate-180"></i>
                 </button>
-                <div className="absolute left-1/2 -translate-x-1/2 mt-2 ml-28 w-[900px] h-[800px] bg-white shadow-2xl rounded-2xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 border border-gray-100 p-1 py-1">
+
+                <div className="absolute left-1/2 -translate-x-1/2 mt-4 ml-28 w-[900px] h-[400px] bg-white shadow-2xl rounded-2xl opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 z-50 border border-blue-100 p-3 py-2 overflow-y-auto border-t-0 ">
                   <TopStores />
                 </div>
               </div>
@@ -163,9 +173,9 @@ const Navbar = () => {
 
             {/* Additional Links */}
             <div className="hidden xl:flex items-center gap-6 text-sm text-gray-500">
-              <a href="/blog" className="hover:text-blue-600 transition-colors">Blog</a>
-              <a href="/help" className="hover:text-blue-600 transition-colors">Help Center</a>
-              <a href="/contact" className="hover:text-blue-600 transition-colors">Contact</a>
+              {/* <a href="/blog" className="hover:text-blue-600 transition-colors">Blog</a> */}
+              {/* <a href="/help" className="hover:text-blue-600 transition-colors">Help Center</a> */}
+              {/* <a href="/contact" className="hover:text-blue-600 transition-colors">Contact</a> */}
             </div>
           </div>
         </div>

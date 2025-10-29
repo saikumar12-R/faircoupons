@@ -1,63 +1,78 @@
 import React, { useState } from "react";
 import { GoDotFill } from "react-icons/go";
-import { IoMdClose } from "react-icons/io";
-import faircoupon1 from "../../assets/boy.png";
-import faircoupon2 from "../../assets/coupon.png";
-import faircoupon3 from "../../assets/discount.png";
-import logo from "../../assets/pumpkin.jpg";
+import { IoClose } from "react-icons/io5";
 
 const DealsCoupon = ({ onClose }) => {
-  const images = [faircoupon1, faircoupon2, faircoupon3];
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeDot, setActiveDot] = useState(0);
 
   const handleDotClick = (index) => {
-    setActiveIndex(index);
+    setActiveDot(index);
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black/40 backdrop-blur-sm z-50">
-      <div className="relative bg-white rounded-xl shadow-lg w-[90%] max-w-md p-6 border-t-4 border-blue-500">
+    <div className="fixed inset-0 bg-black bg-opacity-40 backdrop-blur-sm flex justify-center items-center z-50 px-4">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full p-8 relative animate-fadeIn">
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-3 right-3 text-gray-600 hover:text-red-500"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
         >
-          <IoMdClose size={24} />
+          <IoClose size={28} />
         </button>
 
-        {/* Popup Content */}
-        <div className="text-center mb-6">
-          <h1>By signing in, you could have earned</h1>
-          <h1 className="font-bold text-3xl text-blue-600">upto 6.7% CD cashback</h1>
-          <h3>No Coupon Code Required</h3>
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Left Content Section */}
+          <div className="flex-1 text-center md:text-left">
+            <h1 className="text-gray-600 text-lg mb-2">
+              By signing in, you could have earned
+            </h1>
+            <h1 className="font-bold text-3xl md:text-4xl text-blue-600 mb-3">
+              upto 6.7% CD cashback
+            </h1>
+            <h3 className="text-gray-500 text-lg mb-6">
+              No Coupon Code Required
+            </h3>
 
-          <button className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-lg text-lg hover:bg-blue-600">
-            Deal Activated
-          </button>
-        </div>
-
-        {/* Image Carousel + Dots */}
-        <div className="flex flex-col items-center space-y-3">
-          <img
-            src={images[activeIndex]}
-            alt="Deal"
-            className="w-72 h-48 object-cover rounded-md shadow-md"
-          />
-
-          {/* Dots */}
-          <div className="flex space-x-2">
-            {images.map((_, index) => (
-              <GoDotFill
-                key={index}
-                onClick={() => handleDotClick(index)}
-                className={`cursor-pointer text-2xl ${
-                  activeIndex === index ? "text-blue-600" : "text-gray-400"
-                }`}
-              />
-            ))}
+            <button
+              className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105 shadow-md"
+            >
+              Deal Activated
+            </button>
           </div>
 
-          <img src={logo} alt="Logo" className="w-24 mt-4" />
+          {/* Right Content Section */}
+          <div className="flex-1 flex flex-col items-center">
+            <div className="w-48 h-48 bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl flex items-center justify-center mb-4 shadow-md">
+              <span className="text-gray-500 text-sm">Coupon Image</span>
+            </div>
+
+            {/* Dot Indicators */}
+            <div className="flex gap-2 mb-4">
+              {[0, 1, 2].map((index) => (
+                <GoDotFill
+                  key={index}
+                  onClick={() => handleDotClick(index)}
+                  className={`cursor-pointer transition-all duration-300 ${
+                    activeDot === index
+                      ? "text-blue-500 scale-125"
+                      : "text-gray-300 hover:text-gray-400"
+                  }`}
+                  size={16}
+                />
+              ))}
+            </div>
+
+            {/* Logo Placeholder */}
+            <div className="w-32 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+              <span className="text-gray-500 text-xs">Brand Logo</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 text-center">
+          <p className="text-gray-500 text-sm">
+            * Terms and conditions apply. Cashback credited within 24 hours.
+          </p>
         </div>
       </div>
     </div>

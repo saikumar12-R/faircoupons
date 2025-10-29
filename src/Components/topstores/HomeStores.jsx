@@ -35,6 +35,15 @@ const HomeStores = () => {
       categories: ["Electronics"],
       code: "SAVE50",
     },
+    {
+      id: 4,
+      title: "$20 OFF Laptops",
+      type: "Code",
+      verified: "2h ago",
+      worked: "50%",
+      categories: ["HealthCare"],
+      code: "SAVE50",
+    },
   ];
 
   const renderStars = (rating) => {
@@ -102,48 +111,55 @@ const HomeStores = () => {
       <h2 className="text-2xl font-semibold mb-6 text-gray-800">
         🎁 Available Offers
       </h2>
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {coupons.map((item) => (
-          <div
-            key={item.id}
-            className="bg-white p-6 rounded-2xl shadow-md border hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 flex flex-col justify-between"
-          >
-            <div>
-              <img
-                src={boy}
-                alt="coupon"
-                className="w-full h-40 object-contain mb-3"
-              />
-              <h3 className="text-lg font-semibold text-gray-800 mb-1">
-                {item.title}
-              </h3>
-              <p className="text-gray-500 text-sm mb-1">
-                ⏱ Last Verified: {item.verified}
-              </p>
-              <p className="text-green-600 text-sm font-medium mb-3">
-                👍 {item.worked} said it worked
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                {item.categories.map((cat, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold"
-                  >
-                    #{cat}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            <button
-              onClick={() => setSelectedCoupon(item)}
-              className="w-full bg-blue-600 text-white py-2.5 rounded-xl font-medium hover:bg-blue-700 transition"
-            >
-              {item.type === "Code" ? "Show Code" : "View Deal"}
-            </button>
+      <div className="flex justify-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
+    {coupons.map((item) => (
+      <div
+        key={item.id}
+        className="bg-white p-4 h-[300px] w-[270px] rounded-2xl shadow-md border border-gray-200 
+                   hover:shadow-2xl transform hover:scale-[1.02] transition-all duration-300 
+                   flex flex-col justify-between"
+      >
+        <div>
+          <img
+            src={boy}
+            alt="coupon"
+            className="w-full h-28 object-contain mb-3"
+          />
+          <h3 className="text-lg font-semibold text-gray-800 mb-1 text-center">
+            {item.title}
+          </h3>
+          <p className="text-gray-500 text-sm mb-1 text-center">
+            ⏱ Last Verified: {item.verified}
+          </p>
+          <p className="text-green-600 text-sm font-medium mb-3 text-center">
+            👍 {item.worked} said it worked
+          </p>
+          <div className="flex flex-wrap justify-center gap-2 mb-4">
+            {item.categories.map((cat, idx) => (
+              <span
+                key={idx}
+                className="bg-blue-50 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold"
+              >
+                #{cat}
+              </span>
+            ))}
           </div>
-        ))}
+        </div>
+
+        <div className="flex justify-center">
+          <button
+            onClick={() => setSelectedCoupon(item)}
+            className="w-32 bg-blue-600 text-white py-2 rounded-xl font-medium hover:bg-blue-700 transition"
+          >
+            {item.type === "Code" ? "Show Code" : "View Deal"}
+          </button>
+        </div>
       </div>
+    ))}
+  </div>
+</div>
+
 
       {/* About and Similar Stores */}
       <div className="mt-12 grid lg:grid-cols-2 gap-10">
