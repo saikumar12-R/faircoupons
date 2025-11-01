@@ -280,131 +280,180 @@ const navigate=useNavigate();
       >
         <main>
           {/* Hero Section */}
-          <section className="gradient-bg pt-12 pb-20 overflow-hidden">
-            <div className="container mx-auto px-4">
-              <div className="flex flex-col lg:flex-row items-center">
-                <div className="lg:w-1/2 mb-10 lg:mb-0">
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/80 text-primary-700 text-sm font-medium mb-6 shadow-soft">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-2"></span>
-                    Trusted by 2M+ shoppers worldwide
-                  </div>
-                  <h1 className="text-5xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                    Unlock{" "}
-                    <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-                      Exclusive Deals
-                    </span>{" "} <br/>
-                    & Save More
-                  </h1>
-                  <p className="text-lg text-gray-600 mb-8 max-w-lg">
-                    Discover verified coupons, cashback offers, and exclusive
-                    deals from 30,000+ stores. Start saving today!
-                  </p>
-                  <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                    <button className="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 rounded-xl font-medium transition-colors flex items-center justify-center">
-                      <i className="fas fa-bolt mr-2"></i>
-                      Explore Top Deals
-                    </button>
-                    <button className="bg-white hover:bg-gray-100 text-gray-800 px-6 py-3 rounded-xl font-medium transition-colors border border-gray-300 flex items-center justify-center">
-                      <i className="fas fa-play-circle mr-2"></i>
-                      How It Works
-                    </button>
-                  </div>
+       <section className="relative bg-gradient-to-r from-primary-600 via-purple-600 to-accent-500 py-20 overflow-hidden">
+  {/* Background Decorations */}
+  <div className="absolute inset-0">
+    <div className="absolute top-0 left-0 w-72 h-72 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
+    <div className="absolute bottom-0 right-0 w-80 h-80 bg-white/20 rounded-full blur-3xl animate-ping"></div>
+  </div>
 
-                  <div className="mt-10 flex items-center space-x-6">
-                    <div>
-                      <p className="text-2xl font-bold text-gray-900">500K+</p>
-                      <p className="text-gray-600 text-sm">Active Coupons</p>
-                    </div>
-                    <div className="h-10 w-px bg-gray-300"></div>
-                    <div>
-                      <p className="text-2xl font-bold text-gray-900">30K+</p>
-                      <p className="text-gray-600 text-sm">Stores</p>
-                    </div>
-                    <div className="h-10 w-px bg-gray-300"></div>
-                    <div>
-                      <p className="text-2xl font-bold text-gray-900">2M+</p>
-                      <p className="text-gray-600 text-sm">Happy Users</p>
-                    </div>
-                  </div>
-                </div>
+  {/* MAIN CONTENT */}
+  <div className="container mx-auto px-6 relative z-10">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
+      {/* LEFT SIDE */}
+      <div className="lg:w-1/2 text-center lg:text-left">
+        <div className="inline-flex items-center px-4 py-1 rounded-full bg-white/20 backdrop-blur-md text-white text-sm font-medium mb-6">
+          <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
+          Trusted by 2M+ smart shoppers
+        </div>
 
-                <div className="lg:w-1/2 relative">
-                  <div className="relative z-10">
-                    <div className="bg-white rounded-2xl p-6 shadow-soft max-w-md mx-auto floating">
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
-                            <i className="fas fa-gem text-white text-lg"></i>
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-gray-900">
-                              Member Exclusive
-                            </h3>
-                            <p className="text-sm text-gray-500">
-                              Extra 15% off electronics
-                            </p>
-                          </div>
-                        </div>
-                        <span className="trending-badge px-2 py-1 rounded-full text-xs font-bold">
-                          HOT
-                        </span>
-                      </div>
-                      <div className="bg-gray-50 rounded-xl p-4 mb-4">
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <p className="text-gray-500 text-sm">Use code</p>
-                            <p className="font-mono font-bold text-lg">
-                              HARBOR15
-                            </p>
-                          </div>
-                          <button className="bg-primary-500 hover:bg-primary-600 text-white px-4 py-2 rounded-lg font-medium transition-colors">
-                            Copy Code
-                          </button>
-                        </div>
-                      </div>
-                      <div className="flex items-center text-sm text-gray-500">
-                        <i className="far fa-clock mr-1"></i>
-                        <span>Expires in 2 days</span>
-                        <span className="mx-2">•</span>
-                        <i className="far fa-check-circle mr-1 text-green-500"></i>
-                        <span>Verified today</span>
-                      </div>
-                    </div>
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
+          Unlock <span className="text-yellow-300">Exclusive Deals</span> <br />
+          & Save <span className="text-pink-300">More Every Day</span>
+        </h1>
 
-                    <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-soft max-w-xs z-0">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-accent-500 to-primary-500 flex items-center justify-center">
-                          <i className="fas fa-shipping-fast text-white"></i>
-                        </div>
-                        <div>
-                          <p className="font-medium text-gray-900">
-                            Free Shipping
-                          </p>
-                          <p className="text-xs text-gray-500">
-                            56 offers available
-                          </p>
-                        </div>
-                      </div>
-                    </div>
+        <p className="text-lg text-gray-100 mb-8 max-w-xl mx-auto lg:mx-0">
+          Find verified coupons, cashback offers, and trending discounts from
+          over <span className="font-semibold text-white">30,000+ stores</span>.
+          Shop smarter, save faster!
+        </p>
 
-                    <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-soft max-w-xs z-0">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center">
-                          <i className="fas fa-percentage text-white"></i>
-                        </div>
-                        <div>
-                          <p className="font-medium text-gray-900">Cashback</p>
-                          <p className="text-xs text-gray-500">
-                            Up to 10% back
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        {/* BUTTONS */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+          <button className="bg-white text-primary-600 hover:bg-gray-100 px-6 py-3 rounded-xl font-semibold flex items-center justify-center shadow-md transition-all hover:scale-105">
+            <i className="fas fa-fire mr-2 text-lg text-yellow-500"></i>
+            Explore Top Deals
+          </button>
+          <button className="bg-transparent border border-white/70 text-white px-6 py-3 rounded-xl font-semibold flex items-center justify-center hover:bg-white/10 transition-all">
+            <i className="fas fa-play-circle mr-2"></i>
+            Watch Demo
+          </button>
+        </div>
+
+        {/* STATS */}
+        <div className="mt-10 flex flex-wrap justify-center lg:justify-start gap-8 text-white/90">
+          <div>
+            <p className="text-3xl font-bold text-white">500K+</p>
+            <p className="text-sm">Active Coupons</p>
+          </div>
+          <div className="h-12 w-px bg-white/40"></div>
+          <div>
+            <p className="text-3xl font-bold text-white">30K+</p>
+            <p className="text-sm">Partner Stores</p>
+          </div>
+          <div className="h-12 w-px bg-white/40"></div>
+          <div>
+            <p className="text-3xl font-bold text-white">2M+</p>
+            <p className="text-sm">Happy Shoppers</p>
+          </div>
+        </div>
+      </div>
+
+      {/* RIGHT SIDE CARD */}
+      <div className="lg:w-1/2 relative">
+        {/* Main Coupon Card */}
+        <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-md mx-auto transform hover:-translate-y-2 transition-all duration-300">
+          <div className="flex items-center justify-between mb-6">
+            <div className="flex items-center space-x-3">
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center shadow-lg">
+                <i className="fas fa-gift text-white text-2xl"></i>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 text-lg">
+                  Limited Time Offer
+                </h3>
+                <p className="text-gray-500 text-sm">
+                  Extra 20% off on Electronics
+                </p>
               </div>
             </div>
-          </section>
+            <span className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-3 py-1 text-xs rounded-full font-semibold">
+              HOT
+            </span>
+          </div>
+
+          <div className="bg-gray-100 rounded-xl p-5 mb-5 flex justify-between items-center">
+            <div>
+              <p className="text-gray-500 text-sm">Use code</p>
+              <p className="font-mono text-xl font-bold text-gray-800">
+                SAVE20
+              </p>
+            </div>
+            <button className="bg-primary-500 text-white px-4 py-2 rounded-lg font-medium hover:bg-primary-600 transition-all">
+              Copy
+            </button>
+          </div>
+
+          <div className="flex items-center text-gray-500 text-sm">
+            <i className="far fa-clock mr-1"></i> Expires in
+            <span className="font-semibold ml-1">1 day</span>
+            <span className="mx-2">•</span>
+            <i className="far fa-check-circle mr-1 text-green-500"></i> Verified
+            just now
+          </div>
+        </div>
+
+        {/* Floating Mini Cards */}
+        <div className="absolute -top-8 -right-6 bg-white rounded-2xl shadow-xl p-4 flex items-center space-x-3 animate-bounce">
+          <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl flex items-center justify-center">
+            <i className="fas fa-wallet text-white"></i>
+          </div>
+          <div>
+            <p className="font-medium text-gray-800">Cashback</p>
+            <p className="text-xs text-gray-500">Up to 10% back</p>
+          </div>
+        </div>
+
+        <div className="absolute -bottom-8 -left-6 bg-white rounded-2xl shadow-xl p-4 flex items-center space-x-3 animate-float">
+          <div className="w-10 h-10 bg-gradient-to-br from-accent-500 to-primary-500 rounded-xl flex items-center justify-center">
+            <i className="fas fa-truck-fast text-white"></i>
+          </div>
+          <div>
+            <p className="font-medium text-gray-800">Free Shipping</p>
+            <p className="text-xs text-gray-500">On all orders</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* ADDITIONAL FEATURED COUPONS SECTION */}
+    <div className="mt-20">
+      <h2 className="text-center text-3xl font-bold text-white mb-10">
+        🔥 Featured Coupons & Trending Offers
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {[
+          { store: "Amazon", code: "AMZ15", offer: "15% off Fashion" },
+          { store: "Flipkart", code: "FLIP10", offer: "Extra 10% off Electronics" },
+          { store: "Myntra", code: "STYLE20", offer: "Flat 20% off Clothing" },
+        ].map((coupon, i) => (
+          <div
+            key={i}
+            className="bg-white rounded-2xl p-6 shadow-xl hover:-translate-y-2 transition-all duration-300"
+          >
+            <h3 className="text-lg font-bold text-gray-800 mb-2">
+              {coupon.store}
+            </h3>
+            <p className="text-gray-500 mb-3">{coupon.offer}</p>
+            <div className="flex justify-between items-center">
+              <span className="font-mono font-semibold text-gray-900">
+                {coupon.code}
+              </span>
+              <button className="bg-primary-500 hover:bg-primary-600 text-white px-3 py-1 rounded-lg text-sm">
+                Copy
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    {/* TRUST BADGES */}
+    <div className="mt-16 flex flex-wrap justify-center gap-8 text-white/80 text-sm">
+      <div className="flex items-center gap-2">
+        <i className="fas fa-lock text-yellow-300"></i> Secure Payments
+      </div>
+
+      <div className="flex items-center gap-2">
+        <i className="fas fa-headset text-pink-300"></i> 24/7 Support
+      </div>
+      <div className="flex items-center gap-2">
+        <i className="fas fa-award text-blue-300"></i> Verified Sellers
+      </div>
+    </div>
+  </div>
+</section>
+
 
           {/* login details */}
           <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
@@ -515,80 +564,74 @@ const navigate=useNavigate();
           </section>
 
 {/* banners */}
-        <section className="ml-9 mr-9 rounded-lg bg-gradient-to-b from-gray-900 via-black to-gray-800 text-white py-10 relative overflow-hidden">
-  {/* Floating Halloween Decorations */}
+       <section className="ml-9 mr-9 rounded-xl bg-gradient-to-br from-orange-500 via-red-500 to-pink-600 text-white py-8 relative overflow-hidden shadow-2xl">
+  {/* Emergency/Sale Style Banner */}
+  <div className="relative p-8">
+    {/* Animated Border */}
+    <div className="absolute inset-0 border-2 border-white/30 rounded-xl animate-pulse"></div>
+    
+    {/* Flashing Alert */}
+    <div className="absolute -top-2 -left-2 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold animate-bounce">
+      🔥 HOT DEAL
+    </div>
+    
+    <div className="flex flex-col lg:flex-row items-center justify-between">
+      {/* Main Offer */}
+      <div className="flex-1 text-center lg:text-left">
+        <h1 className="text-5xl font-black mb-4 drop-shadow-lg">
+          FLASH SALE!
+        </h1>
+        <p className="text-2xl font-bold mb-2">
+          Everything must go - Prices slashed!
+        </p>
+        <p className="text-lg opacity-90 mb-6">
+          Don't miss out on these incredible limited-time offers
+        </p>
+        
+        {/* Countdown Timer */}
+        <div className="flex justify-center lg:justify-start space-x-4 mb-6">
+          {[
+            { label: 'HRS', value: '24' },
+            { label: 'MIN', value: '59' },
+            { label: 'SEC', value: '59' }
+          ].map((item, index) => (
+            <div key={index} className="bg-black/30 backdrop-blur-sm rounded-lg p-3 text-center min-w-16">
+              <div className="text-2xl font-bold">{item.value}</div>
+              <div className="text-xs opacity-80">{item.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+      
+      {/* CTA Section */}
+      <div className="text-center">
+        <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 border-2 border-white/40">
+          <div className="text-4xl font-black text-yellow-300 mb-2 drop-shadow-lg">
+            70% OFF
+          </div>
+          <div className="text-sm mb-4 font-medium">
+            Use code: <span className="bg-white text-red-600 px-2 py-1 rounded font-bold">FLASH2024</span>
+          </div>
+          <button className="bg-white text-red-600 font-black py-4 px-12 rounded-xl text-lg hover:bg-yellow-100 transition-all duration-300 transform hover:scale-110 shadow-2xl border-2 border-yellow-300">
+            SHOP NOW 🚀
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/8/88/Halloween_spider_web_icon.svg"
-    alt="Web"
-    className="absolute bottom-8 left-10 w-16 h-16 opacity-50"
-  />
-
-  {/* Section Heading */}
-  <div className="ml-7 font-extrabold text-4xl">
-    <h1>🎃 Halloween Special Offers 👻</h1>
-  </div>
-
-  {/* Offer Cards */}
-  <div className="flex flex-col lg:flex-row gap-6 p-8">
-    {/* Left Banner */}
-    <div className="relative flex-1 bg-gradient-to-r from-orange-700 to-orange-500 rounded-2xl p-6 flex flex-col justify-between overflow-hidden shadow-[0_0_20px_#ff7518]">
-      {/* Background Decorations */}
-      <div className="absolute top-0 left-0 w-24 h-24 bg-purple-600 rounded-full mix-blend-multiply opacity-40 -translate-x-10 -translate-y-10 blur-2xl"></div>
-      <div className="absolute bottom-0 right-0 w-32 h-32 bg-red-600 rounded-full mix-blend-multiply opacity-40 translate-x-10 translate-y-10 blur-2xl"></div>
-
-      <h2 className="text-3xl font-bold mb-2 text-black">
-        🕸️ Spooky Rewards + Free Treats 🍬
-      </h2>
-      <p className="text-sm text-gray-100 mb-4">Oct 25th - Nov 1st</p>
-
-      <div className="flex items-center space-x-4 bg-black/60 text-orange-400 rounded-xl p-2 text-sm w-max backdrop-blur-sm border border-orange-400">
-        <span>Powered by:</span>
-        <img
-          src="https://tse4.mm.bing.net/th/id/OIP.SQo91Sr6F5BL3emlJszSTwHaHa?w=154&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3"
-          alt="Dell"
-          className="h-5"
-        />
-        <span>Co-Powered by:</span>
-        <img
-          src="data:image/webp;base64,UklGRqgFAABXRUJQVlA4IJwFAACQJACdASrrAA4BPp1Ook2lpKMiIJgI2LATiWlu4XYBGlk7fPJt5zmUbjn0fflWMa1P/AV33oO/a/8l4Z6929e1774nEN3GfG8x7egf9I+gb6j9g7dSQozKaqlAegq01VKA9BVpqqUB6CrTVUoD0FWmqpQHoKtNVSgPQVaaqlAegq01VKA9BVpemlVQe2j1ongpKDDtYGUvTdHZ3SeUEEGAvVM0pN0Y4yeAY7EoredIQgKffYGTvD9KkS53rSlxLKGFkjxw8ZpF+YdZCMwTbrGgWEIenRa2utr4zK7mPVjqvEBcGOJLG07Ul4aSSqLxXVJOnHEbPVz3i5KDGDz1Eac6fk6dh6CrTVUoD0FWmqpQHoKtNVSgPQVaaqlAegq01VKA9BVpqqUB6CrTVUjgAP7/nLgAAAAZHOATmqesH0dApba5wms+bcbUBWG9O2fEl5IroTrX374M9Z4lCnbSsxfb4I2JjkaMQgzWfVI2569ydOoESvUybzoJWt5XuV/+ruv8RhnDAZl6QfDB6MhjQgvwi+DF18Zuww0dxwmANJ21Jeopv6xDw39x5gyjXFq479n1whcUTQ/6fXzv/6EsBRvcvEJsSqNYF/1tHmuGsZ70V9r6Lj/FXnjA2pRVXAQvgOVfq9jzK0Hcyscy/zoNlFgLBNNjK+YvaZmFPT/+ndiwXtdQ/F6zPA/Il3mP3djbv76Kzw1Mvgd8KjG8JLXI3KHmgs3JX4JSSTFlMy7KPILPxXYNrIr5FNKfvO2RICwAL20P3fe8xneSNMfpCthErJGNR37sx6VdiNQjHpQQIMQLOBojPG0Bv6y9xtCTcsO5N2PHDlBsxc6vHFUfLjZ8Veu4KZYsOqYvJmKmCDqrkWKdkTnk+yPdLOlHWURfmn9+VmOWcDtgRT0n0qMST8rdZZWavT88F2PeJ/HLek5ZjyRyJgxjOvCcLQfOEHoH5/xAgULF9x/mgsb+MGKmAPG0ztVeYTOk1eUknH+42T8fBO81M8STvLaF2lN65gLz0PDoUFIQ99lNS5xYGgEwN43Ryx3fbYxjGDAb4hxOk0c1a4p2hJLCQ5Q/YhWAkN6Krnw6dduf/gsEMUyW27spM0aP3vGXTOtH75rVrxDVmAsAAjrCMGq6EbXVbMX4EOiGrUw1pA4MihnFPUJ/ebIm+XYY66HP41lMcLSkRydNgnBTMbj04AuTfIAbygz3E4VU2Bw8d5PDzp2uBjBBctN+TNVuaAvKz+WRcWCqs4SllghWaUOXqk/VJBO/4J9qWNA0x37kkdFsmCZDk4Gk4EFaQRhUJaW6+jUhoxCuH+7q44nIYBPFSokjyQmlCMtDdBDqk2wuupM1v5mCFc5uv/DPIQuUFO+a/PGEBMZAuBdVQnC6nYF0gAYQnWnBPtSxoLUT14OFBCWYV3HOpxRf8bjbbEPwt86RZS9Y7jfJVilwqWfu4BwtrmBK9kwR0HlOt/+ApdwEuS4IBfkOzeHQzwJEQvbzc1uAX7F/rKhCiLXNuTExGNDVVpF36y73vLs9EM1woQ93HilbDFLeLHuzT/VO+7+2h97b3pRIWYMCIEowomvtFpM8+EXGjKiXEXo8x+J6uEG/Zl3DTTtPRvwCGdL/23SEnr4vH9P4p5YZ1b3CWMK7OAk9f2YQd5AwrK8qchZiarvFFiRvfEvQH0+Gmu7ynoxkWXiVEarJ+Q1DFL5zEAfGssrkORffwXqfhY8nc79dK7qRF1ssCLxehumvzqWT91RTymnUtWz6HBTmz528c2ZzQc0IVeYq+HqR+Q9Go1y1alcT1v+lkQJ5kE3bXAbttGTblMmd5fhK7AR2c3iknFok6gE3cpE+puaXBGjqcuBxr/jiJrAiD+5/TjyL232rpwCpyRpvr8eFj2WG0eoTHKqrUiDLZ3BcAnoypDAAAAAAAA=="
-          alt="Jupiter"
-          className="h-5"
-        />
-        <img
-          src="https://via.placeholder.com/50x20/000000/ff7518?text=Klook"
-          alt="Klook"
-          className="h-5"
-        />
-      </div>
-
-      <button className="absolute bottom-4 right-4 w-12 h-12 bg-black rounded-lg flex items-center justify-center text-orange-500 text-xl border-2 border-orange-500 hover:bg-orange-600 hover:text-black transition-all" onClick={handleBanners}>
-        &rarr;
-      </button>
+  {/* Scrolling Text */}
+  <div className="bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600 py-3 overflow-hidden shadow-md">
+      <marquee 
+        behavior="scroll"
+    direction="left"
+    scrollamount="6"
+    className="text-white font-medium tracking-wide rounded-lg"
+      >
+          <span className="mx-8">⭐ Free shipping on all orders • ⭐ 30-day money-back guarantee • ⭐ 24/7 customer support • ⭐ Limited stock available • </span>
+          <span className="mx-8">⭐ Free shipping on all orders • ⭐ 30-day money-back guarantee • ⭐ 24/7 customer support • ⭐ Limited stock available • </span>
+      </marquee>
     </div>
-
-    {/* Right Banner */}
-    <div className="relative flex-1 bg-gradient-to-r from-purple-900 to-black rounded-2xl p-6 flex flex-col justify-between overflow-hidden shadow-[0_0_25px_#9333ea]">
-      <h2 className="text-3xl font-bold mb-4 text-orange-400">
-        👻 Frighteningly Good Deals Await!
-      </h2>
-      <div className="flex space-x-3">
-        <div className="bg-orange-400 text-black font-bold px-4 py-2 rounded-lg shadow-md animate-pulse">
-          TRICK
-        </div>
-        <div className="bg-orange-400 text-black font-bold px-4 py-2 rounded-lg shadow-md animate-pulse">
-          TREAT
-        </div>
-        <div className="bg-orange-400 text-black font-bold px-4 py-2 rounded-lg shadow-md animate-pulse">
-          SAVINGS
-        </div>
-      </div>
-
-      <button className="absolute bottom-4 right-4 w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center text-black text-xl hover:bg-orange-600 transition-all border border-orange-300" onClick={handleBanners}>
-        &rarr;
-      </button>
-    </div>
-  </div>
 </section>
 
 
@@ -876,7 +919,6 @@ const navigate=useNavigate();
   </div>
 </div>
 
-
           {/* Featured Deals */}
           <section className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
@@ -1146,67 +1188,53 @@ const navigate=useNavigate();
   </div>
 </section>
 
+
 {/* cashback */}
-<section className=" mt-10 ml-9 mr-9 rounded-xl  relative py-16 bg-gradient-to-br from-gray-900 via-indigo-900 to-black overflow-hidden">
-  <div className="absolute inset-0 -z-10 opacity-40 bg-[radial-gradient(circle_at_20%_30%,rgba(99,102,241,0.3),transparent),radial-gradient(circle_at_80%_60%,rgba(168,85,247,0.25),transparent)]"></div>
-
-  <div className="max-w-7xl mx-auto px-2 text-white">
-
+<section className="w-full py-16 bg-gray-100">
+  <div className="max-w-7xl mx-auto px-6">
     {/* Header */}
-    <div className="flex flex-col sm:flex-row justify-between items-center mb-16">
-      <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight flex items-center gap-3">
-        💸 Hosting Partner Deals
-      </h2>
-      <button className="mt-6 sm:mt-0 bg-gradient-to-r from-purple-600 to-indigo-500 text-white font-semibold px-8 py-3 rounded-full shadow-lg hover:scale-105 transition-all duration-300">
-        Explore All →
-      </button>
+    <div className="text-center mb-12">
+      <h2 className="text-4xl font-bold text-gray-800">🌐 Web Hosting Offers</h2>
+      <p className="text-gray-600 mt-2">
+        Get exclusive cashback offers from trusted hosting partners.
+      </p>
     </div>
 
     {/* Card Section */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-      {[
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+     {[
         { name: "Hostinger", logo: "data:image/webp;base64,UklGRooKAABXRUJQVlA4IH4KAACwPgCdASoIAQ4BPp1Oo0slpKOhpvOpoLATiU3b3f+flHzvf9h3h4IfDb6TN8fv+O/uvOg/O3sAfq10ufMP50vok/0vpVdQR6AHS/5C95U6l/n/rKsDdAPPl2Dyk4hXId/D2Cc0jx6Pef3I9oQnT3MtThqf0Y+b/hCIWKscZx8qSkwGEZitZZ0m71goHGb8En4L0vLtcX9sPzXqcQ//RxSnFKCFqn7IVCmLVwiwqz0yi6o3qpS9EhiqeXUhFq4Rcv9cnvsEKAhEyQZHrxqClHyW7idcLxZzJpda+Y8ZKPmMonD8N9TATHSsYreHWW3hGiGazsyLmMe8qPRkLnkXIEvDVw4uLdztMCFIHVWIywA1SbmmJqBbgJJBVSTBgeR0mbEBfDAz1wQQq6/NfqBTS/3xA9BqBPcRpAoLKm/lcjRBI+XRvrFzKehVeDGCjeWV5X27+tYHM9HQyRvfK9jj140ycPJiEOwPr000HrK0jdnNTpKvMI3bqL1YU5EpgWEyVn9T9gK7V9Ez+uQKtKokqnIQcZT9ar0UcpHNug7w9cBke6/WIzHPL3RK3p6/2dQTtGuQUS5vgGrS+Z/Va8/SXAc7pDLHK6kItT5r/v42Fs8c/QjdSWVWGJ/kZznDboC71s2NsORsIDVUyR8rIZ0i/7Ek7RHr97pXYhf/4zlSfEAA/vikENYIQOstiR9cVEfsGcFwPWoSq+Ta5NcVB6vH4Ldbzc6CVbcRaVvD6lXjzZ4vL10L7O7Y4kFQ2CMp3QuynQieAapSlBmvozmvMjvf6kqsIEPv1emroiKYIP+4RQwAypHjIbRJ/2lL2hi3INQzJHF5LMZX1UiNro3QIhjAz66dPOdsO8WDuiw6kKnpUJmVPvUhKiVgWmPmu3ULT2zZAT4xfvDTFouIsVV/3cvVY9XPJ/bR2EXcr+6NSc335SIC5xRCIHpKTvFtZAPInGRqF/25XFszWlQUKP10cGFWJCA1k1tswQ4vk9pSkUKj9RWBsxttLwX6SqE0hGvE1X+PDuIHUq5J5/+CwoToFKle3rHvEhTCmThTE6qhwsr5VmrKJHlAStgsCetmEk2K0bVaN4igNwhBOyzpbUx89SIs8rvLOBoRUIe8ekG9jPJVkLdYkbIuEB8frqt6MCuK4rDKF2VNRzWOHrog7g5vledD4DIjuUq/gpcQldpdCAa9DY2LG2I3s6uh3MU4eXNsJ65cLcCIb0eyu2fd6ycGsWesAAHBs8u57iYbClY9sg3lxfs5z1NXd8FqNHgXscYgbSuZtrjV0c/vPfGBv1RiV//MzKMKxnU+x9jAwbaGr1mCKE91vpeu4LVxnjT41sAAACQ8AqH03yMVsHXBLOtcGYbtyV7I3zXxEy0xsO2o9ATR5EtLTe6xn6fPNxo18PL+AC4H1+Nwq8uLlM8YQc68HttaosGb57VQhk5mu1WhGfUtABMKjJ8eFJj5E8BI7H0wZD7OAByj1XYnXskEhudBUCFZnd4f497GjR7T7srPo1hJW4in19/9cOfKhk9uOp50+7enrPjbg63UGjJUGz9Ze/D8Y3GUTfuCRevXem6ZtMMlSwfFSbyvPFvVi+JfVNg3tZp2jLorQ+QmRvDB7A7aDpNJ6Jeb+v3/4XjaiGD7VInB+5PV6K6KrpjbDEPOX9OZA0u7gD1NVbgbyZnqXK5B37u4ehFHE8r8MItFMN4H3+HC21WCWn/tL7vLsioOxUdpXP5BQb8fSio3fU9i7AxVOr+CGZeH9jBPcQCRXMxcwMce1EU0A3VX1CXGqsmuh6KzuFijl0HWWjZuwmnM1Lcb44fA8a1xJjMPqMRXuDOkLJPeh+hcP2k9wFCSyJLWUF5KRbWvHW6PjDBAejy5Ms22fqeDvGp0qjMZKwNRyifHHf683DRQGqwZ5PnrQZu/9HrmvZWPNuFnPvbwcwmTPo+Nr7yuMABr22jnphsZtrhD3Xuyv7pisyaJDwUw14yZeSmM1RpPzhFkF5jTyDbfOKBYFrpsqJIGvh0cJ/xCL28s/EeLsRY6EulB+xggboAjrLUkDOI0pDRfi+KzFtbWTq2uKPHD2azY7U4Y97bTUOEo1hXBo6u0YEHeON9l4we9+iW00meqxSnYDgU6VwnVS181q3+JObaPpIgAOXb+7bJrHcKOMKW+3iNZx8KEU0wMccJC+iRHB/9XzpA5U90BL7y0TX1LK7XziPGozb5DXJjWFDDWMkB6aufX7uOBCTPQLpS3UVqA+5zOA+ej6lyxG838e3zBJKQlSSYMXQpe3/8DX1sdUhGB6SKh0ElHoiQs29YYSASmY7ZU4NKoH6ldUsBg40I3t94IpjZfiPRoE7kdR/h/5jeklLe+TAeT5cUuR8NXq9orT7NqMcXvwJpUiMG1Eq15Nao3jomAJckcTbdFgAipYLKoEG0Bwo9AJLQT3LEC+AWH7/5DO9T3wARzdU1P2vLe+913zBdKT/ZhxEBwgEsa8TYeS9nDQIt8CclICl7GzORbRyQfGrlRtzJWsZTb35WFuB/3ZgsgFydravYXLfdBBnBtEsjOLa0ktVK7U9EXDrMDWQsJwb8jodqViuRLWEzImb/TS1LHRlzYaQ180oYgPjVBa36KMZxfmMUItSwLwbZm2ytH7cOJTiVd56Bpi0KnXvS9S+GdH75KtrV3EJnOEYJx41GYgPUkMrRHgTzxigXB77HsedCAym0ZWf0sK2k+Q5S8oCSL5VQ6DpfgJvWghRxr4d4Ds3eXoKql3GvdBRtw9azBWk+3Xy6HJhq3y/+TbxHz2LMhpM7EP+oY8wGI3bgB0qe6lbPVtM9UZWyFbqOtbesL11m6PbertwXbBxpLREC9bj6WA/XiQkfYAmpppg7Gtr09hhwKyqFMh4eEhCau5ZsNLrj7aeHGX1Xwkyuoe0bu9vfo4DVm3hfwBALH42v3wcEME8+94GO+UUFEqM9o7aUtwMMHSI7EQwt/g1H1KxT1IHbJcjUfBJH19Wn0NnCwU9bdWzVbGdCG8PDN5rqFso6e4E5Qikyohgan7nJfpR97WKV+bScYgQGWGK8sbzaQEVgdrrkuxhnuVvH+vkj3SFWB5tUlHYceTwJXC3ZMmmL2py+llHCyL3WET4DwmXJr3ApqAACkUctAZBjSCzPNQsDnOk/3LhAPY/c0FRBeqmVTgUECA4+zvF+JIeOCr72+Amt7j6i5lpfdrKnCujZ1/KFIOESAWu39Lqk/qUBn13N6dFvZdbfW2Y043a3TFXTVQr9JZISKQMyxKBaGISBhWAnYv/LGm3bgOkaYr5ErgJ8zN8UT41qsvx0mQoBMvXxRPKi8abLOwa8NRazuxewoTWdcxzlPZdZfvS8AXDdpWK38cwqfOIrAighOlVq67wbTvDx3Y6se3N9k5Hd58bscm8dbfLgQPPu5c0cU9Kj02CYR18ZOyEmwg2Qs/TzgYDYB19x8CVmoa01cgvAwgDp7T7fKMBNKbr6c2zlzpoWICmGvLKPjz4Rfi48GiOdEvdqhX9q/p4mXjMGeTDa1Evvrn78zd26tps7qasvEgpcYt6QBPpcVeh9glY4Qpnmq7EDyfwBuqMDhb1++1w+SAAAA", cashback: "$45 Cashback", glow: "from-purple-500" },
         { name: "Bluehost", logo: "data:image/webp;base64,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", cashback: "$35 Cashback", glow: "from-blue-500" },
         { name: "SiteGround", logo: "data:image/webp;base64,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", cashback: "$25 Cashback", glow: "from-green-500" },
         { name: "A2 Hosting", logo: "data:image/webp;base64,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", cashback: "$30 Cashback", glow: "from-emerald-500" },
-        { name: "GoDaddy", logo: "data:image/webp;base64,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", cashback: "$22 Cashback", glow: "from-yellow-400" },
-      ].map((host, idx) => (
+        // { name: "GoDaddy", logo: "data:image/webp;base64,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", cashback: "$22 Cashback", glow: "from-yellow-400" },
+      ].map((item, i) => (
         <div
-          key={idx}
-          className={`relative bg-gradient-to-br ${host.glow} via-transparent to-gray-900/50 rounded-3xl p-1.5 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-500 cursor-pointer`}
+          key={i}
+          className="bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 p-6 text-center"
         >
-          <div className="bg-gray-900/80 backdrop-blur-2xl rounded-3xl p-6 text-center border border-gray-700 hover:border-indigo-500 transition">
-            <img
-              src={host.logo}
-              alt={host.name}
-              className="w-28 h-20 object-contain mx-auto mb-4 drop-shadow-lg group-hover:scale-105 transition-transform"
-            />
-            <h3 className="text-lg font-bold mb-1">{host.name}</h3>
-            <p className="text-green-400 font-semibold mb-4">{host.cashback}</p>
-            <button className="bg-gradient-to-r from-green-500 to-emerald-600 px-5 py-2.5 rounded-full font-semibold text-sm text-white hover:scale-105 transition-transform">
-              Claim Offer
-            </button>
-          </div>
+          <img
+            src={item.logo}
+            alt={item.name}
+            className="h-14 mx-auto mb-4 object-contain"
+          />
+          <h3 className="font-semibold text-xl text-gray-800 mb-2">{item.name}</h3>
+          <p className="text-gray-600 text-sm mb-4">{item.desc}</p>
+          <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">
+            {item.cashback}
+          </span>
         </div>
       ))}
     </div>
 
-    {/* Call to Action */}
-    <div className="mt-24 text-center">
-      <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 px-10 py-12 rounded-3xl shadow-2xl inline-block max-w-3xl">
-        <h3 className="text-3xl font-extrabold mb-3">Start Earning with Hosting Affiliates 🚀</h3>
-        <p className="text-indigo-100 mb-6 max-w-2xl mx-auto">
-          Unlock the highest cashback rates and boost your affiliate income by promoting top hosting platforms today. 
-        </p>
-        <button className="bg-white text-indigo-700 font-semibold px-8 py-3 rounded-full hover:bg-indigo-50 transition shadow-md">
-          Join Affiliate Program
-        </button>
-      </div>
+    {/* CTA */}
+    <div className="text-center mt-12">
+      <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+        View All Offers →
+      </button>
     </div>
-
   </div>
 </section>
-
 
 
  {/* Stats Section */}
@@ -1235,61 +1263,70 @@ const navigate=useNavigate();
 
 
 {/* subscribe */}
-<section className=" mb-10 relative bg-gradient-to-br from-indigo-600 via-blue-600 to-purple-600 py-24 px-6 md:px-16 rounded-3xl mx-4 md:mx-10 mt-10 overflow-hidden shadow-2xl">
-  {/* Floating Blobs for Depth */}
-  <div className="absolute top-0 left-0 w-80 h-80 bg-pink-400 opacity-25 blur-3xl rounded-full animate-pulse"></div>
-  <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-400 opacity-20 blur-3xl rounded-full animate-pulse"></div>
+<section className="relative bg-gradient-to-br from-[#ffffff] via-[#f5f7fa] to-[#e6ebff] py-24 px-6 md:px-16 rounded-3xl mx-4 md:mx-10 mt-10 overflow-hidden shadow-xl mb-8">
+  {/* Floating Background Glow Elements */}
+  <div className="absolute -top-20 -left-24 w-80 h-80 bg-blue-300/40 blur-[120px] rounded-full animate-pulse"></div>
+  <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-pink-300/40 blur-[150px] rounded-full animate-pulse"></div>
 
   {/* Content */}
-  <div className="relative z-10 container mx-auto flex flex-col lg:flex-row items-center justify-between gap-14">
-
-    {/* Left: CTA Content */}
-    <div className="lg:w-1/2 text-white">
-      <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-5 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-300">
-        Unlock The Best Hosting & Cashback Deals!
-      </h1>
-      <p className="text-lg text-gray-100 opacity-95 leading-relaxed mb-8">
-        Subscribe to get early access to exclusive affiliate promotions, coupons, and limited-time hosting offers direct to your inbox.
-      </p>
-
-      {/* Email Input and Button */}
-      <div className="flex flex-col sm:flex-row items-center gap-4">
-        <div className="w-full sm:flex-grow">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            className="w-full px-5 py-3.5 rounded-xl text-gray-900 bg-white focus:outline-none focus:ring-4 focus:ring-pink-300 transition"
-          />
-        </div>
-        <button className="px-8 py-3.5 bg-gradient-to-r from-yellow-400 to-orange-400 text-black font-bold rounded-xl shadow-lg hover:scale-105 transition">
-          Subscribe Now
-        </button>
-      </div>
-
-      {/* Trust Indicator */}
-      <p className="text-sm text-gray-200 mt-5">
-        🔒 We respect your privacy — unsubscribe anytime.
-      </p>
-    </div>
-
-    {/* Right: Illustration */}
-    <div className="lg:w-1/2 relative flex justify-center">
-      <div className="relative bg-white/10 backdrop-blur-md rounded-3xl p-10 shadow-xl border border-white/20 hover:scale-105 transition-transform">
+  <div className="relative z-10 container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
+    {/* Right Side: Image / Illustration */}
+    <div className="lg:w-1/2 flex justify-center relative">
+      <div className="relative bg-white border border-gray-100 rounded-3xl p-10 shadow-2xl backdrop-blur-lg hover:scale-105 transition-transform duration-500">
         <img
           src={coupon}
           alt="Exclusive Deals"
-          className="w-80 h-80 object-contain drop-shadow-[0_10px_30px_rgba(255,255,255,0.3)]"
+          className="w-72 h-72 object-contain drop-shadow-[0_8px_25px_rgba(0,0,0,0.2)]"
         />
-
-        {/* Floating Discount Tag */}
-        <div className="absolute -top-6 -right-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-5 py-3 rounded-full text-lg shadow-lg rotate-12">
-          70% OFF
+        {/* Floating Offer Badge */}
+        <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-bold px-5 py-2 rounded-full text-sm shadow-lg rotate-12">
+          🔥 Save 70%
         </div>
+      </div>
+    </div>
+
+    {/* Left Side: Text Content */}
+    <div className="lg:w-1/2 text-center lg:text-left">
+      <h2 className="text-5xl md:text-6xl font-extrabold leading-snug mb-6 text-gray-900">
+        Unlock{" "}
+        <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-indigo-500 to-cyan-400">
+          Smarter Savings
+        </span>{" "}
+        with Every Purchase!
+      </h2>
+
+      <p className="text-gray-600 text-lg leading-relaxed mb-8">
+        Discover verified coupons, exclusive cashback rewards, and daily
+        discounts from 30,000+ trusted brands. Join millions of smart shoppers
+        saving big every day.
+      </p>
+
+      {/* Email Input + Button */}
+      <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          className="w-full sm:w-auto flex-1 px-5 py-3.5 rounded-xl text-gray-900 bg-white border border-gray-300 focus:outline-none focus:ring-4 focus:ring-blue-300 transition-all duration-300"
+        />
+        <button className="px-8 py-3.5 bg-gradient-to-r from-blue-600 to-indigo-500 text-white font-semibold rounded-xl shadow-lg hover:scale-105 hover:shadow-indigo-400/40 transition">
+          Get Started
+        </button>
+      </div>
+
+      {/* Trust Line */}
+      <div className="flex items-center justify-center lg:justify-start gap-3 mt-8">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/747/747376.png"
+          alt="Verified"
+          className="w-6 h-6"
+        />
+        <p className="text-sm text-gray-500">
+          Trusted by 2M+ happy users • 100% secure and private
+        </p>
       </div>
     </div>
   </div>
 </section>
-
 
 
         </main>
