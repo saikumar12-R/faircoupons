@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
+import friday from "../../assets/13.png" 
 
 const CategoriesStores = () => {
   const [activeTab, setActiveTab] = useState("ALL");
@@ -107,6 +108,24 @@ const CategoriesStores = () => {
                 </div>
               ))}
             </section>
+
+
+
+            <section className="border rounded-lg shadow-sm p-6 bg-gradient-to-b from-blue-600 to-purple-700">
+                                         <div className="text-center">
+                                          <h1 className="font-bold text-white text-2xl">Shop with Coupons Code</h1>
+                                          <p className="text-white">Use the coupons code save your money with also a cashback offers using the faircoupons website</p>
+                                          </div>
+                                          <button className="mt-10 border border-red-500 p-2 rounded-md bg-red-500 text-white">Known More</button>
+                                        <div className="flex flex-col bg-red-500 mix-blend-multiply translate-x-0 inset-0 transform opacity-0"></div>
+                                          
+                                          <div className='mt-4'>
+                                            <img src={friday}/>
+                                            </div> 
+                                        
+                                       
+                                  </section>
+
           </aside>
 
           {/* Main Content */}
@@ -166,6 +185,18 @@ const CategoriesStores = () => {
                   <p className="text-gray-600 mb-4">
                     Great Indian Festival Offer: Massive discounts across all categories.
                   </p>
+                  <div className="flex flex-wrap items-center gap-2 mb-4">
+              <span className="border border-green-300 bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                Code
+              </span>
+              <span className="border border-green-300 bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">
+                Verified
+              </span>
+              <span className="border border-orange-300 bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">
+                Exp. in 3 days
+              </span>
+            </div>
+
                   <div className="flex justify-between items-center">
                     <button className="text-blue-600 font-medium hover:underline" aria-label="Show offer details">
                       Show Details
@@ -238,6 +269,36 @@ const CategoriesStores = () => {
           </main>
         </div>
       </div>
+
+           {/* About Section */}
+       <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6 text-start mt-16 mx-4 sm:mx-8 md:mx-16 lg:mx-32 tracking-tight">
+  About <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600">
+    {store || 'the Store'}
+  </span>
+</h2>
+
+<div className="relative bg-gradient-to-br from-white via-gray-50 to-gray-100 rounded-3xl shadow-lg border border-gray-200 p-8 sm:p-10 mt-12 mb-16 mx-4 sm:mx-8 md:mx-16 lg:mx-32 overflow-hidden transition-transform duration-300 hover:scale-[1.01] hover:shadow-2xl">
+  {/* Decorative Glow Effects */}
+  <div className="absolute top-0 left-0 w-40 h-40 bg-indigo-200 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+  <div className="absolute bottom-0 right-0 w-52 h-52 bg-purple-200 rounded-full blur-3xl opacity-40 animate-pulse"></div>
+
+  <p className="relative text-gray-700 text-lg sm:text-xl leading-relaxed mb-6 z-10">
+    <span className="font-semibold text-indigo-600">{store || 'the store'}</span> is one of the most
+    popular online destinations for shoppers looking for quality products at great prices.
+    Whether you’re buying <span className="font-medium">electronics</span>, <span className="font-medium">fashion</span>,
+    home appliances, or groceries, <span className="font-semibold text-purple-600">{store || 'the store'}</span> offers
+    unbeatable deals and cashback opportunities to make your shopping experience more rewarding.
+  </p>
+
+  <p className="relative text-gray-700 text-lg sm:text-xl leading-relaxed z-10">
+    Stay connected with <span className="font-semibold text-indigo-600">MyFairCoupons</span> to never
+    miss the latest <span className="font-semibold text-purple-600">{store || 'the store'}</span> coupons,
+    exclusive discounts, and seasonal offers. Our team ensures that every deal you see here is
+    <span className="font-semibold text-green-600"> 100% verified</span> and up to date — so you can shop
+    confidently and <span className="font-bold text-indigo-600">save big every time!</span>
+  </p>
+</div>
+
     </>
   );
 };

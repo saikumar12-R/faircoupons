@@ -18,8 +18,9 @@ import Signup from './Components/signup/Signup';
 import Login from './Components/signup/Login';
 import DealsCoupon from './Components/home/DealsCoupons';
 import TopStores from './Components/topstores/TopStores';
-
-
+import Cashback from './Components/home/Cashback';
+import RequestCoupon from './Components/couponsform/RequestCoupon';
+import SubmitCoupon from './Components/couponsform/SubmitCoupon';
 
 
 function ScrollToTop(){
@@ -57,7 +58,9 @@ function App() {
       <Route path='/login' element={<Login/>}/>
       <Route path='/dealscoupon' element={<DealsCoupon/>}/>
       <Route path='/topstores' element={<TopStores/>}/>
-   
+      <Route path='/cashback/:name' element={<Cashback/>}/>
+      <Route path='/requestcoupon' element={<RequestCoupon/>}/>
+      <Route path='/submitcoupon' element={<SubmitCoupon/>}/>
     </Routes>
     <Footer/>
    </Router>

@@ -73,43 +73,60 @@ const Navbar = () => {
             </div>
 
             {/* User Actions */}
-            <div className="flex items-center gap-4">
-              {/* Language & Currency */}
-              <div className="hidden md:flex items-center gap-3 text-sm text-gray-600">
-                <select className="bg-transparent border-none focus:ring-0 focus:outline-none cursor-pointer">
-                  <option>🇺🇸 USD</option>
-                  <option>🇪🇺 EUR</option>
-                </select>
-                <div className="w-px h-4 bg-gray-300"></div>
-                <select className="bg-transparent border-none focus:ring-0 focus:outline-none cursor-pointer">
-                  <option>EN</option>
-                  <option>ES</option>
-                </select>
-              </div>
+           <div className="flex items-center justify-end gap-4">
+  {/* Language & Currency */}
+  <div className="hidden md:flex items-center gap-3 text-sm text-gray-600">
+    <select className="bg-transparent border-none focus:ring-0 focus:outline-none cursor-pointer hover:text-blue-600 transition-colors">
+      <option>🇺🇸 USD</option>
+      <option>🇪🇺 EUR</option>
+    </select>
+    <div className="w-px h-4 bg-gray-300"></div>
+    <select className="bg-transparent border-none focus:ring-0 focus:outline-none cursor-pointer hover:text-blue-600 transition-colors">
+      <option>EN</option>
+      <option>ES</option>
+    </select>
+  </div>
 
-              {/* Action Buttons */}
-              <div className="flex items-center gap-2">
-                <button className="p-2.5 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl transition-all group">
-                  <i className="far fa-heart text-lg group-hover:scale-110 transition-transform"></i>
-                </button>
-                <button className="p-2.5 text-gray-500 hover:text-purple-600 hover:bg-purple-50 rounded-xl transition-all group relative">
-                  <i className="far fa-bell text-lg group-hover:scale-110 transition-transform"></i>
-                  <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
-                </button>
-                <button
-                  onClick={() => navigate("/signup")}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-2.5 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all hover:scale-105 flex items-center gap-2"
-                >
-                  <i className="far fa-user"></i>
-                  Sign In
-                </button>
-              </div>
+  {/* Action Buttons */}
+  <div className="flex items-center gap-3">
+    {/* Heart Icon */}
+    <button
+      className="p-2.5 text-gray-500 hover:text-blue-600 hover:bg-blue-50 rounded-xl 
+                 transition-all duration-200 group shadow-sm hover:shadow-md"
+    >
+      <i className="far fa-heart text-lg group-hover:scale-110 transition-transform"></i>
+    </button>
 
-              {/* Mobile Menu */}
-              <button className="lg:hidden p-2.5 text-gray-600 hover:bg-gray-100 rounded-xl transition-colors">
-                <i className="fas fa-bars text-xl"></i>
-              </button>
-            </div>
+    {/* Notification Icon */}
+    <button
+      className="p-2.5 text-gray-500 hover:text-purple-600 hover:bg-purple-50 rounded-xl 
+                 transition-all duration-200 group relative shadow-sm hover:shadow-md"
+    >
+      <i className="far fa-bell text-lg group-hover:scale-110 transition-transform"></i>
+      <span className="absolute -top-1 -right-1 w-2 h-2 bg-red-500 rounded-full"></span>
+    </button>
+
+    {/* Sign In Button */}
+    <button
+      onClick={() => navigate("/signup")}
+      className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 
+                 text-white px-5 py-2.5 rounded-xl font-semibold shadow-md hover:shadow-lg 
+                 transition-all hover:scale-105 flex items-center gap-2"
+    >
+      <i className="far fa-user"></i>
+      Sign In
+    </button>
+  </div>
+
+  {/* Mobile Menu */}
+  <button
+    className="lg:hidden p-2.5 text-gray-600 hover:bg-gray-100 rounded-xl transition-colors 
+               shadow-sm hover:shadow-md"
+  >
+    <i className="fas fa-bars text-xl"></i>
+  </button>
+</div>
+
           </div>
 
           {/* Bottom Row - Navigation */}
@@ -172,10 +189,9 @@ const Navbar = () => {
             </nav>
 
             {/* Additional Links */}
-            <div className="hidden xl:flex items-center gap-6 text-sm text-gray-500">
-              {/* <a href="/blog" className="hover:text-blue-600 transition-colors">Blog</a> */}
-              {/* <a href="/help" className="hover:text-blue-600 transition-colors">Help Center</a> */}
-              {/* <a href="/contact" className="hover:text-blue-600 transition-colors">Contact</a> */}
+            <div className="hidden xl:flex items-center gap-6 text-md text-black font-bold">
+              <a href="/submitcoupon" className="hover:text-black transition-colors  border border-gray-600 rounded-lg p-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white">Submit Coupon</a>
+              <a href="/requestcoupon" className="hover:text-black transition-colors border border-gray-600 rounded-lg p-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white">Request Coupon</a>
             </div>
           </div>
         </div>

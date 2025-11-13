@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { GoDotFill } from "react-icons/go";
 import { IoClose } from "react-icons/io5";
 
-const DealsCoupon = ({ onClose }) => {
+const DealsCoupon = ({ onClose,data }) => {
   const [activeDot, setActiveDot] = useState(0);
 
   const handleDotClick = (index) => {
@@ -27,7 +27,7 @@ const DealsCoupon = ({ onClose }) => {
               By signing in, you could have earned
             </h1>
             <h1 className="font-bold text-3xl md:text-4xl text-blue-600 mb-3">
-              upto 6.7% CD cashback
+              {data.offers}
             </h1>
             <h3 className="text-gray-500 text-lg mb-6">
               No Coupon Code Required
@@ -42,9 +42,13 @@ const DealsCoupon = ({ onClose }) => {
 
           {/* Right Content Section */}
           <div className="flex-1 flex flex-col items-center">
-            <div className="w-48 h-48 bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl flex items-center justify-center mb-4 shadow-md">
-              <span className="text-gray-500 text-sm">Coupon Image</span>
-            </div>
+            <div className="w-64 h-64 bg-gradient-to-br from-blue-200 to-purple-200 rounded-2xl flex items-center justify-center mb-4 shadow-md">
+    <img
+      src={data.logo}
+      alt="logo"
+      className="w-56 h-56 object-contain"
+    />
+  </div>
 
             {/* Dot Indicators */}
             <div className="flex gap-2 mb-4">
